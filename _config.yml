@@ -1,34 +1,91 @@
+# Site settings
+title: Renan Landing Page # site title
+description: >- # site description 
+  This is my page for me note things I have learn through years <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+lang: en-US # default lang
+timezone: Asia/Jakarta # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/piharpi/jekyll-klise # site repo [optional]
+mode: dark # default theme "dark" | "light"
+
+# Profile settings
+author:
+  name: Renan Nguyễn # author name
+  bio: >- # tell to the world
+    Hi, I'm an Electrical - Electrolnic - Embedded Software Engineer base in Viet Nam. I'm currently working in Japan. <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
+  username: username # general username
+  github: Renan-TP # github username
+  twitter: twitter_username # twitter username
+  facebook: facebook_username # facebook username
+  email: renannguyen@pm.me # email adress
+  avatar: assets/img/Dogwuticon.png # change with your own avatar
+
+# URL settings
+# url: "https://klise.now.sh" #
+baseurl: "/resume-page"
+# permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
+
+# Collection setting
 collections:
-  authors:
-    output: true
   posts:
     output: true
 
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
 defaults:
   - scope:
-      path: 
-      type: "authors"
-    values:
-      layouts: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
       path: ""
     values:
-      layout: "default"
+      layout: post
+      comments: false
 
-baseurl: "/resume-page"
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
 
-# paginate: 1
-# paginate_path: "/authors/page:num/"
+# Homepage limit posts
+number_of_posts: 5
 
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-postfiles
   - jekyll-seo-tag
-
-theme: minimal-mistakes-jekyll

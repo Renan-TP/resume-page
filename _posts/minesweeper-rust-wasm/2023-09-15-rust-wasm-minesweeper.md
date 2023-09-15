@@ -7,6 +7,6 @@ tags: [rust, wasm]
 description: "Build minesweeper game with Rust, run it in browser with WASM"
 usemathjax: true
 ---
-I will update more soon. For now you can try it out [here](https://renantp.github.io/minesweeper-wasm/)
+I will update more soon. For now you can try it out <a href="https://renantp.github.io/minesweeper-wasm/" target="_blank">here</a>
 
 Source code of the project is [here](https://github.com/renantp/minesweeper-wasm).
